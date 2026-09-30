@@ -1,0 +1,343 @@
+/* ==========================================================================
+   NAVIGATION.CSS - THE KINETIC ATELIER
+   Fixed Minimal Header, Mobile Drawer & Vertical Chapter Tracker
+   ========================================================================== */
+
+/* Main Fixed Navigation */
+.site-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--nav-height);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 var(--container-padding);
+  transition: background-color 0.4s ease, border-color 0.4s ease, backdrop-filter 0.4s ease, transform 0.4s ease;
+  border-bottom: 1px solid transparent;
+}
+
+.site-nav.scrolled {
+  background-color: rgba(6, 6, 8, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border-subtle);
+  height: 72px;
+}
+
+/* Agency Logo / Identity */
+.nav-brand {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: 1.45rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-primary);
+  user-select: none;
+}
+
+.brand-dot {
+  width: 6px;
+  height: 6px;
+  background-color: var(--accent-gold);
+  border-radius: 50%;
+  box-shadow: 0 0 10px var(--accent-gold);
+  animation: pulseDot 2.4s ease-in-out infinite;
+  align-self: center;
+}
+
+@keyframes pulseDot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(0.85); }
+}
+
+.brand-sub {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  font-weight: 400;
+  color: var(--text-muted);
+  letter-spacing: 0.22em;
+  margin-left: 2px;
+}
+
+/* Nav Menu Links */
+.nav-center {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+}
+
+.nav-link {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 0.74rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  position: relative;
+  padding: 6px 0;
+  transition: color 0.3s ease;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 1px;
+  background-color: var(--accent-gold);
+  transition: width 0.3s var(--ease-cinematic);
+}
+
+.nav-link:hover {
+  color: #ffffff;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* Right CTA */
+.nav-cta {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.btn-nav-talk {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 22px;
+  border-radius: 100px;
+  border: 1px solid rgba(223, 186, 115, 0.3);
+  background: rgba(223, 186, 115, 0.05);
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #ffffff;
+  backdrop-filter: blur(8px);
+  transition: all 0.3s var(--ease-cinematic);
+}
+
+.btn-nav-talk:hover {
+  background: var(--accent-gold);
+  color: #050507;
+  border-color: var(--accent-gold);
+  box-shadow: 0 0 25px rgba(223, 186, 115, 0.35);
+  transform: translateY(-1px);
+}
+
+.btn-nav-talk .arrow-icon {
+  transition: transform 0.3s ease;
+}
+
+.btn-nav-talk:hover .arrow-icon {
+  transform: translateX(3px);
+}
+
+/* Mobile Hamburger Toggle */
+.mobile-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6px;
+  width: 38px;
+  height: 38px;
+  padding: 8px;
+  background: transparent;
+  cursor: pointer;
+  z-index: 1100;
+}
+
+.mobile-toggle span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #ffffff;
+  border-radius: 2px;
+  transition: transform 0.3s ease, opacity 0.2s ease;
+}
+
+.mobile-toggle.active span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.mobile-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.mobile-toggle.active span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Mobile Menu Overlay */
+.mobile-menu-overlay {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(6, 6, 8, 0.98);
+  backdrop-filter: blur(24px);
+  z-index: 1050;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 10vw;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.4s var(--ease-cinematic), visibility 0.4s ease;
+}
+
+.mobile-menu-overlay.open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.mobile-links {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.mobile-link {
+  font-family: var(--font-display);
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.mobile-link:hover, .mobile-link:active {
+  color: #ffffff;
+  transform: translateX(10px);
+}
+
+.mobile-meta {
+  margin-top: 48px;
+  padding-top: 32px;
+  border-top: 1px solid var(--border-subtle);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* ==========================================================================
+   VERTICAL SCROLL PROGRESS INDICATOR
+   01 CAPTURE | 02 STRATEGY | 03 CREATE | 04 AMPLIFY | 05 CONVERT | 06 SCALE
+   ========================================================================== */
+.scroll-tracker {
+  position: fixed;
+  right: clamp(16px, 2.5vw, 36px);
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 950;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  pointer-events: auto;
+  user-select: none;
+}
+
+.tracker-item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+  cursor: pointer;
+  group: true;
+  opacity: 0.35;
+  transition: opacity 0.3s ease, transform 0.3s var(--ease-cinematic);
+}
+
+.tracker-label {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  opacity: 0;
+  transform: translateX(8px);
+  transition: opacity 0.3s ease, transform 0.3s ease, color 0.3s ease;
+  white-space: nowrap;
+}
+
+.tracker-line {
+  width: 14px;
+  height: 2px;
+  background-color: var(--text-muted);
+  border-radius: 2px;
+  transition: width 0.3s var(--ease-cinematic), background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tracker-item:hover {
+  opacity: 0.85;
+}
+
+.tracker-item:hover .tracker-label {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.tracker-item:hover .tracker-line {
+  width: 22px;
+  background-color: #ffffff;
+}
+
+/* Active Chapter State */
+.tracker-item.active {
+  opacity: 1;
+}
+
+.tracker-item.active .tracker-label {
+  opacity: 1;
+  transform: translateX(0);
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.tracker-item.active .tracker-line {
+  width: 32px;
+  background-color: #ffffff;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+}
+
+/* Responsive Navigation */
+@media (max-width: 900px) {
+  .nav-center {
+    display: none;
+  }
+  
+  .mobile-toggle {
+    display: flex;
+  }
+  
+  .scroll-tracker {
+    right: 12px;
+    gap: 12px;
+  }
+  
+  .tracker-label {
+    display: none !important;
+  }
+  
+  .tracker-line {
+    width: 8px;
+    height: 2px;
+  }
+  
+  .tracker-item.active .tracker-line {
+    width: 18px;
+  }
+}

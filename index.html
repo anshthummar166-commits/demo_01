@@ -1,0 +1,982 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KINETIC // Premium Creative & Performance Marketing Agency</title>
+  <meta name="description" content="We turn attention into revenue. A continuous scroll-driven cinematic digital marketing agency experience.">
+
+  <!-- Google Fonts: Editorial Instrument Serif, Swiss Inter Tight & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+
+  <!-- Core Stylesheets -->
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./css/navigation.css">
+  <link rel="stylesheet" href="./css/chapters.css">
+  <link rel="stylesheet" href="./css/components.css">
+
+</head>
+<body>
+
+  <!-- Film Grain & Ambient Layer -->
+  <div class="film-grain" aria-hidden="true"></div>
+  <div class="ambient-glow" aria-hidden="true"></div>
+
+  <!-- Custom Inertial Cursor (Desktop) -->
+  <div class="custom-cursor" aria-hidden="true"></div>
+  <div class="cursor-dot" aria-hidden="true"></div>
+
+  <!-- Ambient Audio Toggle -->
+  <button id="audio-toggle" class="audio-toggle-btn" aria-label="Toggle cinematic soundscape">
+    <div class="audio-bars">
+      <span class="audio-bar"></span>
+      <span class="audio-bar"></span>
+      <span class="audio-bar"></span>
+    </div>
+    <span class="audio-text">SOUND: OFF</span>
+  </button>
+
+  <!-- ==========================================================================
+       SITE NAVIGATION
+       ========================================================================== -->
+  <header class="site-nav">
+    <a href="#scene-capture" class="nav-brand">
+      <span class="brand-dot"></span>
+      <span>KINETIC</span>
+      <span class="brand-sub">/ ATELIER</span>
+    </a>
+
+    <nav class="nav-center" aria-label="Primary Navigation">
+      <a href="#scene-cases" class="nav-link">WORK</a>
+      <a href="#scene-services" class="nav-link">SERVICES</a>
+      <a href="#scene-process" class="nav-link">PROCESS</a>
+      <a href="#scene-performance" class="nav-link">RESULTS</a>
+      <a href="#scene-strategy" class="nav-link">STRATEGY</a>
+    </nav>
+
+    <div class="nav-cta">
+      <button class="btn-nav-talk" data-open-strategy>
+        <span>LET'S TALK</span>
+        <span class="arrow-icon">→</span>
+      </button>
+
+      <button class="mobile-toggle" aria-label="Toggle Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Menu Drawer -->
+  <div class="mobile-menu-overlay" aria-hidden="true">
+    <div class="mobile-links">
+      <a href="#scene-cases" class="mobile-link">WORK</a>
+      <a href="#scene-services" class="mobile-link">SERVICES</a>
+      <a href="#scene-process" class="mobile-link">PROCESS</a>
+      <a href="#scene-performance" class="mobile-link">RESULTS</a>
+      <a href="#scene-strategy" class="mobile-link">STRATEGY</a>
+    </div>
+    <div class="mobile-meta">
+      <button class="btn-magnetic btn-primary mobile-talk-btn" data-open-strategy>
+        <span>BOOK STRATEGY CALL →</span>
+      </button>
+      <span class="label-mono">KINETIC ATELIER // ALL RIGHTS RESERVED</span>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       MINIMAL VERTICAL SCROLL PROGRESS TRACKER
+       01 CAPTURE | 02 STRATEGY | 03 CREATE | 04 AMPLIFY | 05 CONVERT | 06 SCALE
+       ========================================================================== -->
+  <nav class="scroll-tracker" aria-label="Chapter Progress">
+    <div class="tracker-item active" data-target="#scene-capture">
+      <span class="tracker-label">01 CAPTURE</span>
+      <span class="tracker-line"></span>
+    </div>
+    <div class="tracker-item" data-target="#scene-strategy">
+      <span class="tracker-label">02 STRATEGY</span>
+      <span class="tracker-line"></span>
+    </div>
+    <div class="tracker-item" data-target="#scene-creative">
+      <span class="tracker-label">03 CREATE</span>
+      <span class="tracker-line"></span>
+    </div>
+    <div class="tracker-item" data-target="#scene-distribution">
+      <span class="tracker-label">04 AMPLIFY</span>
+      <span class="tracker-line"></span>
+    </div>
+    <div class="tracker-item" data-target="#scene-performance">
+      <span class="tracker-label">05 CONVERT</span>
+      <span class="tracker-line"></span>
+    </div>
+    <div class="tracker-item" data-target="#scene-results">
+      <span class="tracker-label">06 SCALE</span>
+      <span class="tracker-line"></span>
+    </div>
+  </nav>
+
+  <!-- ==========================================================================
+       MAIN SCROLL-DRIVEN STORY CONTAINER
+       ========================================================================== -->
+  <main id="story-viewport">
+
+    <!-- ==========================================================================
+         CHAPTER 01 — CAPTURE
+         "YOU HAVE 3 SECONDS." -> "STOP THE SCROLL." -> Hero Asset Reveal
+         ========================================================================== -->
+    <section id="scene-capture" class="scene-container">
+      <div class="scene-pinned capture-pin">
+        
+        <!-- Full-Bleed Atmospheric Ambience Canvas (Reacts to Word Hover) -->
+        <div class="hero-hover-backdrop" aria-hidden="true">
+          <div class="backdrop-slide backdrop-stop" style="background-image: url('./assets/images/hover-stop.jpg');"></div>
+          <div class="backdrop-slide backdrop-the" style="background-image: url('./assets/images/hover-the.jpg');"></div>
+          <div class="backdrop-slide backdrop-scroll" style="background-image: url('./assets/images/hover-scroll.jpg');"></div>
+          <div class="backdrop-vignette"></div>
+        </div>
+
+        <!-- Live Countdown Badge & Interactive Codex Prompt -->
+        <div class="capture-top-bar">
+          <div class="capture-timer-badge">
+            <span class="timer-dot"></span>
+            <span class="timer-text">YOU HAVE <span class="timer-countdown">03:00 SEC</span></span>
+          </div>
+          <div class="hero-hover-hint">
+            <span class="hint-dot"></span>
+            <span class="hint-label">HOVER WORDS TO EXPLORE ARCHIVE</span>
+          </div>
+        </div>
+
+        <!-- Colossal Typography: STOP THE SCROLL (Interactive Kinetic Words) -->
+        <div class="capture-headline-wrap">
+          <h1 class="capture-headline">
+            <span class="hover-word" data-word="stop" data-tag="01 // TEXTURE SYNTAX" data-title="ORGANIC BRAND TEXTURE" data-metric="99.4% RETENTION AT STOP">
+              <span class="word-kicker">01 // TEXTURE</span>
+              <span class="word-text">STOP</span>
+            </span>
+            <span class="hover-word" data-word="the" data-tag="02 // BRAND SPOTLIGHT" data-title="SHINE ON YOUR BRAND" data-metric="3.8X CTR DISCOVERY">
+              <span class="word-kicker">02 // SPOTLIGHT</span>
+              <span class="word-text">THE</span>
+            </span>
+            <span class="hover-word" data-word="scroll" data-tag="03 // VISUAL DISRUPTION" data-title="BREAK THROUGH THE CLUTTER" data-metric="+420% RECALL VELOCITY">
+              <span class="word-kicker">03 // DISRUPTION</span>
+              <span class="word-text"><em>SCROLL.</em></span>
+            </span>
+          </h1>
+        </div>
+
+        <!-- Cinema Viewfinder Art Portal (3D Holographic Viewfinder Canvas) -->
+        <div class="hero-viewfinder-portal" aria-hidden="true">
+          <div class="viewfinder-frame">
+            <!-- Camera Viewfinder HUD Reticles & Telemetry -->
+            <div class="hud-corner hud-top-left"></div>
+            <div class="hud-corner hud-top-right"></div>
+            <div class="hud-corner hud-bottom-left"></div>
+            <div class="hud-corner hud-bottom-right"></div>
+            
+            <div class="viewfinder-header">
+              <span class="vf-rec"><span class="vf-rec-dot"></span>REC · 4K RAW</span>
+              <span class="vf-shutter">50MM F/1.2 · 1/500S · ISO 100</span>
+            </div>
+
+            <!-- Stacked Artwork Layers for Instant Liquid Cross-Fade -->
+            <div class="viewfinder-screen">
+              <img class="vf-asset vf-asset-stop" src="./assets/images/hover-stop.jpg" alt="Organic Brand Texture" />
+              <img class="vf-asset vf-asset-the" src="./assets/images/hover-the.jpg" alt="Brand Spotlight Lamp" />
+              <img class="vf-asset vf-asset-scroll" src="./assets/images/hover-scroll.jpg" alt="Stand Out In The Crowd" />
+              <div class="vf-scanlines"></div>
+              <div class="vf-crosshair"></div>
+            </div>
+
+            <!-- Frosted Glass Strategy Drawer -->
+            <div class="viewfinder-drawer">
+              <div class="vf-meta-top">
+                <span class="vf-tag">01 // TEXTURE SYNTAX</span>
+                <span class="vf-metric-badge">99.4% RETENTION</span>
+              </div>
+              <h3 class="vf-title">ORGANIC BRAND TEXTURE</h3>
+            </div>
+          </div>
+        </div>
+
+        <!-- Background Artwork & Video Reveal -->
+        <div class="capture-asset-layer">
+          <div class="capture-asset-card">
+            <video 
+              class="capture-asset-video" 
+              src="./assets/videos/hero-campaign.mp4" 
+              autoplay 
+              muted 
+              loop 
+              playsinline 
+              preload="auto"
+              poster="./assets/images/abstract-violet.jpg">
+            </video>
+            <div class="capture-asset-overlay">
+              <span class="capture-asset-tag">01 / CINEMATIC HERO MOTION</span>
+              <h2 class="capture-asset-title">RHYTHMIC BRAND TEXTURE & MOTION SYNTAX</h2>
+            </div>
+          </div>
+        </div>
+
+        <!-- Narrative Reveal: GOOD. NOW LOOK. -->
+        <div class="capture-reveal-wrap">
+          <span class="capture-reveal-subtitle">GOOD. <em>NOW LOOK.</em></span>
+          <h2 class="capture-reveal-title">WE TURN <em>ATTENTION</em> INTO <em>REVENUE.</em></h2>
+          <div class="capture-ctas">
+            <button class="btn-magnetic btn-primary" data-open-strategy>
+              <span>BOOK A STRATEGY CALL →</span>
+            </button>
+            <a href="#scene-cases" class="btn-magnetic btn-secondary">
+              <span>VIEW OUR WORK →</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Scroll Prompt -->
+        <div class="capture-scroll-prompt">
+          <div class="mouse-scroll-icon">
+            <span class="mouse-wheel"></span>
+          </div>
+          <span class="label-mono">SCROLL TO DIRECT</span>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         CHAPTER 02 — THE PROBLEM
+         "EVERY BRAND WANTS ATTENTION." -> "VERY FEW DESERVE IT."
+         Disruptive Sneaker Poster Parallax Interruption
+         ========================================================================== -->
+    <section id="scene-problem" class="scene-container">
+      <div class="scene-pinned problem-pin">
+        <div class="scene-inner">
+          
+          <div class="problem-text-stage">
+            <span class="label-mono" style="margin-bottom: 20px; color: var(--accent-yellow);">CHAPTER 02 // THE FRICTION</span>
+            <h2 class="problem-line line-1">EVERY BRAND WANTS <em>ATTENTION.</em></h2>
+            <h2 class="problem-line line-2 highlight">VERY FEW <em>DESERVE IT.</em></h2>
+            <h2 class="problem-line line-3 strike" style="margin-top: 24px;">THE PROBLEM ISN'T REACH.</h2>
+            <h2 class="problem-line line-4 text-gradient-gold">IT'S <em>RELEVANCE.</em></h2>
+          </div>
+
+          <!-- Disruptive Visual Interruption (Uploaded Asset 2: Deebug Big Steps Poster) -->
+          <div class="problem-visual-interruption">
+            <img 
+              src="./assets/campaigns/deebug-big-steps.jpg" 
+              alt="Deebug Institute - Big Steps Campaign Hook" 
+              data-zoomable
+            />
+            <div class="problem-badge">02 / VISUAL HOOK // PERSPECTIVE BREAK</div>
+          </div>
+
+          <!-- Axiom Triad -->
+          <div class="problem-triad">
+            <div class="triad-item">
+              <span class="triad-number">01</span>
+              <span class="triad-label">RIGHT MESSAGE</span>
+            </div>
+            <div class="triad-item">
+              <span class="triad-number">02</span>
+              <span class="triad-label">RIGHT PERSON</span>
+            </div>
+            <div class="triad-item">
+              <span class="triad-number">03</span>
+              <span class="triad-label">RIGHT MOMENT</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         CHAPTER 03 — STRATEGY
+         Chaos Into Order Transformation -> Clean Strategic Pipeline
+         ========================================================================== */
+    -->
+    <section id="scene-strategy" class="scene-container">
+      <div class="scene-pinned strategy-pin">
+        <div class="scene-inner">
+          
+          <div class="strategy-header">
+            <span class="label-mono">CHAPTER 03 // ARCHITECTURE</span>
+            <h2 class="strategy-headline">FROM NOISE TO <em>SIGNAL</em></h2>
+          </div>
+
+          <!-- Chaotic scattered elements assembling into ordered pipeline -->
+          <div class="strategy-cluster">
+            <div class="pipeline-connector-line"></div>
+
+            <div class="pipeline-node node-chaos-1">
+              <span class="node-step">STAGE 01</span>
+              <h3 class="node-title">AUDIENCE</h3>
+              <p class="node-desc">Intent mapping, behavioural anthropology & unit economics.</p>
+            </div>
+
+            <div class="pipeline-node node-chaos-2">
+              <span class="node-step">STAGE 02</span>
+              <h3 class="node-title">MESSAGE</h3>
+              <p class="node-desc">Sharp positioning, provocative angle & value proposition.</p>
+            </div>
+
+            <div class="pipeline-node node-chaos-3">
+              <span class="node-step">STAGE 03</span>
+              <h3 class="node-title">CREATIVE</h3>
+              <p class="node-desc">Thumb-stopping visual hooks & cinematic storytelling.</p>
+            </div>
+
+            <div class="pipeline-node node-chaos-4">
+              <span class="node-step">STAGE 04</span>
+              <h3 class="node-title">DISTRIBUTION</h3>
+              <p class="node-desc">Multi-channel deployment, algorithmic bidding & frequency.</p>
+            </div>
+
+            <div class="pipeline-node node-chaos-5">
+              <span class="node-step">STAGE 05</span>
+              <h3 class="node-title">CONVERSION</h3>
+              <p class="node-desc">Frictionless checkouts, high-velocity checkout & revenue.</p>
+            </div>
+          </div>
+
+          <div class="strategy-signal-statement text-gradient-violet">
+            WE FIND THE <em>SIGNAL.</em>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         CHAPTER 04 — CREATIVE
+         The Visual Showcase: Real Creative Works Morphed via Scroll
+         ========================================================================== -->
+    <section id="scene-creative" class="scene-container">
+      <div class="scene-pinned creative-pin">
+        <div class="scene-inner">
+          
+          <div class="creative-showcase-stage">
+            
+            <div class="creative-viewport">
+              
+              <!-- Floating Tabs -->
+              <div class="creative-tabs">
+                <span class="creative-tab-pill active">01 / IDENTITY</span>
+                <span class="creative-tab-pill">02 / CAMPAIGN</span>
+                <span class="creative-tab-pill">03 / MOTION</span>
+                <span class="creative-tab-pill">04 / CULTURE</span>
+              </div>
+
+              <!-- Slide 1: Violet Abstract Organic Art (Uploaded Asset 1) -->
+              <div class="creative-slide active">
+                <div class="creative-media-wrap">
+                  <img src="./assets/images/abstract-violet.jpg" alt="Art Direction Visual Texture" data-zoomable />
+                  <div class="creative-meta-card">
+                    <span class="creative-tag">01 / VISUAL IDENTITY</span>
+                    <h3 class="creative-title">KINETIC SYNTAX ATELIER</h3>
+                    <p class="creative-caption">Organic generative patterns creating an unmistakable, premium aura that separates modern brands from template clutter.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Slide 2: Deebug Big Steps Campaign Poster (Uploaded Asset 2) -->
+              <div class="creative-slide">
+                <div class="creative-media-wrap">
+                  <img src="./assets/campaigns/deebug-big-steps.jpg" alt="Deebug Institute - Big Steps Poster" data-zoomable />
+                  <div class="creative-meta-card">
+                    <span class="creative-tag">02 / DISRUPTIVE AD CREATIVE</span>
+                    <h3 class="creative-title">DEEBUG INSTITUTE: BIG STEPS</h3>
+                    <p class="creative-caption">Subverting generic stock-photo ad fatigue with high-contrast physical typography and dynamic floor-level footwear angles.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Slide 3: Viral Social Motion Video (Uploaded Video Asset) -->
+              <div class="creative-slide">
+                <div class="creative-media-wrap creative-video-wrap">
+                  <video 
+                    class="creative-media-video" 
+                    src="./assets/videos/viral-social.mp4" 
+                    autoplay 
+                    muted 
+                    loop 
+                    playsinline 
+                    preload="auto">
+                  </video>
+                  <div class="creative-meta-card">
+                    <span class="creative-tag">03 / VIRAL MOTION & REELS</span>
+                    <h3 class="creative-title">HIGH-VELOCITY SOCIAL MOTION</h3>
+                    <p class="creative-caption">Short-form video assets engineered to stop the infinite scroll within 0.8 seconds and drive compounding organic reach.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Slide 4: Afterthought Meme & Pop Culture (Uploaded Asset 3) -->
+              <div class="creative-slide">
+                <div class="creative-media-wrap">
+                  <img src="./assets/campaigns/afterthought.jpg" alt="Afterthought - Pop Culture Social Creative" data-zoomable />
+                  <div class="creative-meta-card">
+                    <span class="creative-tag">04 / SOCIAL & CULTURE</span>
+                    <h3 class="creative-title">AFTERTHOUGHT: OF COURSE WE...</h3>
+                    <p class="creative-caption">Culture-native reactive comedy capturing mass audience engagement through self-aware humor and iconic pop-culture figures.</p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Culmination Statement -->
+            <div class="creative-finale-text">
+              <em>CREATIVE</em> MAKES THEM STOP.
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         CHAPTER 05 — DISTRIBUTION
+         One Creative Multiplies Across Network Nodes
+         ========================================================================== -->
+    <section id="scene-distribution" class="scene-container">
+      <div class="scene-pinned distribution-pin">
+        
+        <!-- Interactive Canvas Particle Network -->
+        <canvas id="dist-canvas" class="network-canvas"></canvas>
+
+        <div class="scene-inner distribution-content">
+          
+          <div class="distribution-header">
+            <span class="label-mono">CHAPTER 05 // VELOCITY</span>
+            <h2 class="distribution-title">ONE CREATIVE BECOMES <em>MANY TOUCHPOINTS</em></h2>
+            <p class="distribution-subtitle">RIGHT MESSAGE. RIGHT PERSON. RIGHT TIME.</p>
+          </div>
+
+          <!-- Central Creative Origin Card -->
+          <div class="origin-creative-card">
+            <img src="./assets/campaigns/afterthought.jpg" alt="Original Campaign Asset" />
+          </div>
+
+          <!-- Satellite Distribution Nodes -->
+          <div class="network-nodes-ring">
+            <div class="network-node-badge node-meta">META (IG & FB)</div>
+            <div class="network-node-badge node-google">GOOGLE SEARCH</div>
+            <div class="network-node-badge node-instagram">REELS & STORIES</div>
+            <div class="network-node-badge node-youtube">YOUTUBE SHORTS</div>
+            <div class="network-node-badge node-search">HIGH-INTENT SEO</div>
+            <div class="network-node-badge node-social">COMMUNITY FLYWHEELS</div>
+            <div class="network-node-badge node-web">DIRECT WEB & CRM</div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         CHAPTER 06 — PERFORMANCE
+         Transition from Visuals into Data & Scrubbed Growth Curves
+         ========================================================================== -->
+    <section id="scene-performance" class="scene-container">
+      <div class="scene-pinned performance-pin">
+        <div class="scene-inner">
+          
+          <div class="perf-grid-wrap">
+            
+            <!-- Left Data Telemetry -->
+            <div class="perf-stats-column">
+              <span class="label-mono" style="color: var(--accent-yellow);">CHAPTER 06 // VERIFIED TELEMETRY</span>
+              <h2 class="display-title" style="margin-bottom: 8px;">PERFORMANCE WITHOUT <em>GUESSWORK</em></h2>
+
+              <!-- Metric 1: ROAS -->
+              <div class="perf-metric-card">
+                <div class="perf-metric-top">
+                  <span class="perf-metric-name">RETURN ON AD SPEND (ROAS)</span>
+                  <span class="perf-badge-lift">+123% EFFICIENCY</span>
+                </div>
+                <div class="perf-metric-values">
+                  <span class="perf-before">2.1x</span>
+                  <span class="perf-arrow">→</span>
+                  <span class="perf-after perf-roas-num">4.7x</span>
+                </div>
+              </div>
+
+              <!-- Metric 2: Revenue -->
+              <div class="perf-metric-card">
+                <div class="perf-metric-top">
+                  <span class="perf-metric-name">QUARTERLY REVENUE SCALE</span>
+                  <span class="perf-badge-lift">5.0x COMPOUND</span>
+                </div>
+                <div class="perf-metric-values">
+                  <span class="perf-before">+42%</span>
+                  <span class="perf-arrow">→</span>
+                  <span class="perf-after text-gradient-gold perf-rev-num">+212%</span>
+                </div>
+              </div>
+
+              <!-- Metric 3: Leads -->
+              <div class="perf-metric-card">
+                <div class="perf-metric-top">
+                  <span class="perf-metric-name">QUALIFIED INBOUND LEADS</span>
+                  <span class="perf-badge-lift">+183% VOLUME</span>
+                </div>
+                <div class="perf-metric-values">
+                  <span class="perf-before">1,200</span>
+                  <span class="perf-arrow">→</span>
+                  <span class="perf-after perf-leads-num">3,400</span>
+                </div>
+              </div>
+
+              <!-- Metric 4: CPA -->
+              <div class="perf-metric-card">
+                <div class="perf-metric-top">
+                  <span class="perf-metric-name">COST PER ACQUISITION (CPA)</span>
+                  <span class="perf-badge-lift">-39% CAC</span>
+                </div>
+                <div class="perf-metric-values">
+                  <span class="perf-before">₹850</span>
+                  <span class="perf-arrow">→</span>
+                  <span class="perf-after perf-cpa-num">₹520</span>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Right Interactive SVG Curve Visualization -->
+            <div class="perf-chart-card">
+              <div class="perf-chart-header">
+                <span class="perf-chart-title">GROWTH TRAJECTORY ENGINE</span>
+                <span class="label-mono">LIVE CAMPAIGN BENCHMARK</span>
+              </div>
+
+              <div class="chart-svg-box">
+                <svg viewBox="0 0 600 260" preserveAspectRatio="none">
+                  <defs>
+                    <linearGradient id="chartGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                      <stop offset="0%" stop-color="#f8c822" stop-opacity="0.4"/>
+                      <stop offset="100%" stop-color="#f8c822" stop-opacity="0"/>
+                    </linearGradient>
+                  </defs>
+
+                  <!-- Background Grid Lines -->
+                  <line x1="0" y1="65" x2="600" y2="65" stroke="rgba(255,255,255,0.06)" stroke-dasharray="4 4" />
+                  <line x1="0" y1="130" x2="600" y2="130" stroke="rgba(255,255,255,0.06)" stroke-dasharray="4 4" />
+                  <line x1="0" y1="195" x2="600" y2="195" stroke="rgba(255,255,255,0.06)" stroke-dasharray="4 4" />
+
+                  <!-- Growth Curve Area -->
+                  <path class="chart-area-glow" d="M 0,240 C 140,230 220,180 340,120 C 440,70 520,30 600,15 L 600,260 L 0,260 Z" />
+
+                  <!-- Scrubbed Glowing Path Line -->
+                  <path class="chart-path-glow" d="M 0,240 C 140,230 220,180 340,120 C 440,70 520,30 600,15" />
+                </svg>
+              </div>
+
+              <p class="perf-footer-note">
+                *Verified aggregated performance benchmarks from active agency campaigns. Replaceable with client-specific telemetry upon onboarding.
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         CHAPTER 07 — CASE STUDIES
+         Full-Bleed Campaign Case Studies with User Assets
+         ========================================================================== -->
+    <section id="scene-cases">
+      <div class="scene-inner">
+        <div class="cases-header">
+          <span class="label-mono">CHAPTER 07 // EVIDENCE</span>
+          <h2 class="display-title">TRANSFORMATION IN <em>ACTION</em></h2>
+        </div>
+
+        <!-- Case 01: Deebug Institute -->
+        <article class="case-study-item">
+          <div class="case-media-frame">
+            <img src="./assets/case-studies/case-deebug.jpg" alt="Deebug Institute Big Steps Case Study" data-zoomable />
+          </div>
+          <div class="case-info-pane">
+            <div class="case-tag-row">
+              <span class="case-badge-industry">EDTECH & SKILLS ACCELERATOR</span>
+              <span class="label-mono">CAMPAIGN SPRINT</span>
+            </div>
+            <h3 class="case-client-name">DEEBUG INSTITUTE</h3>
+            <div>
+              <h4 class="case-block-label">THE CHALLENGE</h4>
+              <p class="case-block-body">Severe audience fatigue with typical computer-screen stock photos and generic course promises, leading to soaring acquisition costs.</p>
+            </div>
+            <div>
+              <h4 class="case-block-label">THE APPROACH</h4>
+              <p class="case-block-body">High-contrast canary yellow floor-level perspective hook ("Big Steps This Month"). The physical movement of the sneaker breaking out of the frame created instant thumb-stopping pause.</p>
+            </div>
+            <div>
+              <h4 class="case-block-label">THE RESULT</h4>
+              <p class="case-block-body">4.7x Return on ad spend, 3,400+ qualified applications, and a 62% drop in blended CAC across 60 days.</p>
+            </div>
+            <div class="case-metric-highlight">
+              <span class="case-big-num text-gradient-gold">4.7x</span>
+              <span class="case-metric-label">ROAS EFFICIENCY ACHIEVED</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Case 02: Afterthought Creative -->
+        <article class="case-study-item">
+          <div class="case-media-frame">
+            <img src="./assets/case-studies/case-afterthought.jpg" alt="Afterthought Meme Culture Case Study" data-zoomable />
+          </div>
+          <div class="case-info-pane">
+            <div class="case-tag-row">
+              <span class="case-badge-industry">DIGITAL CULTURE & ENTERTAINMENT</span>
+              <span class="label-mono">SOCIAL VIRALITY</span>
+            </div>
+            <h3 class="case-client-name">AFTERTHOUGHT</h3>
+            <div>
+              <h4 class="case-block-label">THE CHALLENGE</h4>
+              <p class="case-block-body">Dry corporate marketing tone was getting scrolled past by Gen-Z and millennial decision-makers conditioned to ignore ads.</p>
+            </div>
+            <div>
+              <h4 class="case-block-label">THE APPROACH</h4>
+              <p class="case-block-body">Embraced self-aware meme psychology and universally recognizable facial expressions. Paired with conversational comic framing to turn ads into shareable entertainment.</p>
+            </div>
+            <div>
+              <h4 class="case-block-label">THE RESULT</h4>
+              <p class="case-block-body">+212% surge in organic reach, 1.8M impressions with zero brand safety compromises, dropping cost per acquisition to ₹520.</p>
+            </div>
+            <div class="case-metric-highlight">
+              <span class="case-big-num text-gradient-violet">+212%</span>
+              <span class="case-metric-label">ORGANIC BRAND ACCELERATION</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Case 03: Atelier Brand Identity -->
+        <article class="case-study-item">
+          <div class="case-media-frame">
+            <img src="./assets/case-studies/identity-violet.jpg" alt="Kinetic Atelier Visual Identity Case Study" data-zoomable />
+          </div>
+          <div class="case-info-pane">
+            <div class="case-tag-row">
+              <span class="case-badge-industry">LUXURY & CREATIVE STUDIO</span>
+              <span class="label-mono">REBRANDING</span>
+            </div>
+            <h3 class="case-client-name">VORTEX BRAND ATELIER</h3>
+            <div>
+              <h4 class="case-block-label">THE CHALLENGE</h4>
+              <p class="case-block-body">Low deal sizes caused by positioning that looked indistinguishable from commoditized freelance agencies.</p>
+            </div>
+            <div>
+              <h4 class="case-block-label">THE APPROACH</h4>
+              <p class="case-block-body">Complete editorial dark luxury transformation with bespoke generative abstract typography textures, high-contrast typography, and cinema-grade pacing.</p>
+            </div>
+            <div>
+              <h4 class="case-block-label">THE RESULT</h4>
+              <p class="case-block-body">3.8x increase in inbound enterprise retainers with zero price resistance from tier-1 global partners.</p>
+            </div>
+            <div class="case-metric-highlight">
+              <span class="case-big-num">3.8x</span>
+              <span class="case-metric-label">AVERAGE CONTRACT VALUE</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         CHAPTER 08 — SERVICES
+         Dynamic Spotlight Matrix (Not 6 Static Cards)
+         ========================================================================== -->
+    <section id="scene-services" class="scene-container">
+      <div class="scene-pinned services-pin">
+        <div class="scene-inner">
+          
+          <div class="services-layout">
+            
+            <!-- Left Interactive Menu -->
+            <div class="services-menu">
+              <span class="label-mono" style="margin-bottom: 12px; color: var(--accent-violet);">CHAPTER 08 // CAPABILITIES</span>
+              
+              <div class="service-menu-item active">
+                <span class="service-idx">01</span>
+                <span class="service-name">PERFORMANCE MARKETING</span>
+              </div>
+              <div class="service-menu-item">
+                <span class="service-idx">02</span>
+                <span class="service-name">SOCIAL MEDIA ENGINES</span>
+              </div>
+              <div class="service-menu-item">
+                <span class="service-idx">03</span>
+                <span class="service-name">SEO & ORGANIC MONOPOLY</span>
+              </div>
+              <div class="service-menu-item">
+                <span class="service-idx">04</span>
+                <span class="service-name">CREATIVE STUDIO & HOOKS</span>
+              </div>
+              <div class="service-menu-item">
+                <span class="service-idx">05</span>
+                <span class="service-name">BRAND IDENTITY & POSITIONING</span>
+              </div>
+              <div class="service-menu-item">
+                <span class="service-idx">06</span>
+                <span class="service-name">CONVERSION OPTIMIZATION</span>
+              </div>
+            </div>
+
+            <!-- Right Dominant Service Spotlight Panel -->
+            <div class="service-preview-panel">
+              <div>
+                <span class="service-active-tag">DISCIPLINE 01</span>
+                <h3 class="service-active-title">PERFORMANCE MARKETING</h3>
+                <p class="service-active-desc">High-frequency algorithmic media buying across Meta, Google Search, YouTube, and TikTok. Engineered for compounding ROAS and disciplined customer acquisition cost.</p>
+              </div>
+
+              <div class="service-deliverables-list">
+                <span class="service-chip">Full-Funnel Media</span>
+                <span class="service-chip">Algorithmic Bidding</span>
+                <span class="service-chip">CAC Suppression</span>
+                <span class="service-chip">ROAS Optimization</span>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         CHAPTER 09 — PROCESS
+         Horizontal Filmstrip Controlled By Vertical Scroll
+         ========================================================================== -->
+    <section id="scene-process" class="scene-container">
+      <div class="scene-pinned process-pin">
+        <div class="process-horizontal-track">
+          
+          <!-- Slide 01: Discover -->
+          <div class="process-slide">
+            <span class="process-slide-num">01</span>
+            <div class="process-slide-content">
+              <span class="process-step-badge">PHASE 01 // IMMERSION</span>
+              <h3 class="process-step-title">DISCOVER & AUDIT</h3>
+              <p class="process-step-desc">We dismantle your historical ad accounts, analytics telemetry, customer reviews, and competitor blindspots to find the single leverage point that moves the needle.</p>
+            </div>
+          </div>
+
+          <!-- Slide 02: Strategize -->
+          <div class="process-slide">
+            <span class="process-slide-num">02</span>
+            <div class="process-slide-content">
+              <span class="process-step-badge">PHASE 02 // BLUEPRINT</span>
+              <h3 class="process-step-title">STRATEGIZE & MAP</h3>
+              <p class="process-step-desc">We build full-funnel media architecture, audience segmentation matrices, and provocative angles. No guesswork — pure unit economics and predictive models.</p>
+            </div>
+          </div>
+
+          <!-- Slide 03: Create -->
+          <div class="process-slide">
+            <span class="process-slide-num">03</span>
+            <div class="process-slide-content">
+              <span class="process-step-badge">PHASE 03 // CRAFT</span>
+              <h3 class="process-step-title">CREATE & REFINE</h3>
+              <p class="process-step-desc">High-velocity creative sprints. We script, design, shoot, and animate thumb-stopping hooks engineered specifically to stop the infinite scroll and command action.</p>
+            </div>
+          </div>
+
+          <!-- Slide 04: Launch -->
+          <div class="process-slide">
+            <span class="process-slide-num">04</span>
+            <div class="process-slide-content">
+              <span class="process-step-badge">PHASE 04 // DEPLOYMENT</span>
+              <h3 class="process-step-title">LAUNCH & AMPLIFY</h3>
+              <p class="process-step-desc">Simultaneous multi-network distribution across Meta, Google, and TikTok with strict bid guardrails and real-time conversion pixel verification.</p>
+            </div>
+          </div>
+
+          <!-- Slide 05: Optimize -->
+          <div class="process-slide">
+            <span class="process-slide-num">05</span>
+            <div class="process-slide-content">
+              <span class="process-step-badge">PHASE 05 // COMPOUND</span>
+              <h3 class="process-step-title">OPTIMIZE & SCALE</h3>
+              <p class="process-step-desc">Algorithmic scaling of winning variants, continuous CAC reduction, landing page multivariate testing, and compounding customer lifetime value.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         CHAPTER 10 — RESULTS & CONVERGENCE
+         ATTENTION -> INTEREST -> ACTION -> REVENUE
+         "WE DON'T JUST GENERATE ATTENTION. WE TURN IT INTO GROWTH."
+         ========================================================================== -->
+    <section id="scene-results" class="scene-container">
+      <div class="scene-pinned results-pin">
+        <div class="scene-inner">
+          
+          <div class="results-convergence-box">
+            
+            <span class="label-mono" style="margin-bottom: 24px; color: var(--accent-yellow);">CHAPTER 10 // CONVERGENCE</span>
+
+            <!-- Funnel Convergence Sequence -->
+            <div class="results-funnel-sequence">
+              <span class="funnel-step">ATTENTION</span>
+              <span class="funnel-arrow">↓</span>
+              <span class="funnel-step">INTEREST</span>
+              <span class="funnel-arrow">↓</span>
+              <span class="funnel-step">ACTION</span>
+              <span class="funnel-arrow">↓</span>
+              <span class="funnel-step highlight">REVENUE</span>
+            </div>
+
+            <!-- Climax Statement -->
+            <h2 class="results-climax-statement">
+              WE DON'T JUST GENERATE ATTENTION.<br>
+              <span class="text-gradient-gold">WE TURN IT INTO <em>GROWTH.</em></span>
+            </h2>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         FINAL CTA SCENE
+         "READY? LET'S BUILD SOMETHING IMPOSSIBLE TO IGNORE."
+         ========================================================================== -->
+    <section id="scene-cta">
+      
+      <!-- Subtle background ambient art (Uploaded Asset 1) -->
+      <div class="cta-ambient-art">
+        <img src="./assets/images/abstract-violet.jpg" alt="" />
+      </div>
+
+      <div class="cta-content-box">
+        <div class="cta-ready-badge">READY TO DOMINATE?</div>
+        
+        <h2 class="cta-headline">
+          LET'S BUILD<br>
+          SOMETHING<br>
+          <em>IMPOSSIBLE</em><br>
+          TO IGNORE.
+        </h2>
+
+        <div class="cta-button-row">
+          <button class="btn-magnetic btn-primary" data-open-strategy>
+            <span>BOOK A STRATEGY CALL →</span>
+          </button>
+          <a href="#scene-cases" class="btn-magnetic btn-secondary">
+            <span>VIEW OUR WORK →</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==========================================================================
+       SITE FOOTER
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-copy">
+        © 2026 KINETIC ATELIER // PERFORMANCE & CREATIVE MARKETING STUDIO. ALL RIGHTS RESERVED.
+      </div>
+      <div class="footer-socials">
+        <a href="#" class="footer-social-link">TWITTER / X</a>
+        <a href="#" class="footer-social-link">LINKEDIN</a>
+        <a href="#" class="footer-social-link">INSTAGRAM</a>
+        <a href="#" class="footer-social-link">DRIBBBLE</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       INTERACTIVE STRATEGY CALL BOOKING DRAWER
+       ========================================================================== -->
+  <div id="strategy-modal" class="modal-backdrop" aria-hidden="true">
+    <div id="drawer-panel" class="drawer-panel">
+      
+      <div class="drawer-header">
+        <div class="drawer-title-wrap">
+          <span class="drawer-tag">FAST INTAKE // 48H TURNAROUND</span>
+          <h2 class="drawer-title">BOOK STRATEGY CALL</h2>
+        </div>
+        <button id="drawer-close" class="drawer-close-btn" aria-label="Close modal">✕</button>
+      </div>
+
+      <div id="form-success" class="form-success-alert">
+        <h3>BRIEF RECEIVED</h3>
+        <p>Our senior strategy partner will review your brand telemetry and contact you within 24 hours.</p>
+      </div>
+
+      <form id="strategy-form" class="strategy-form">
+        <div class="form-group">
+          <label class="form-label" for="client-name">YOUR NAME / FOUNDER</label>
+          <input type="text" id="client-name" class="form-input" placeholder="e.g. Alexander Vance" required />
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="client-email">BUSINESS WORK EMAIL</label>
+          <input type="email" id="client-email" class="form-input" placeholder="alex@company.com" required />
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="client-brand">COMPANY / WEBSITE URL</label>
+          <input type="text" id="client-brand" class="form-input" placeholder="https://yourbrand.com" required />
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">MONTHLY AD SPEND</label>
+          <div class="budget-pills">
+            <div class="budget-pill" data-budget="$10k - $25k">$10k – $25k</div>
+            <div class="budget-pill selected" data-budget="$25k - $75k">$25k – $75k</div>
+            <div class="budget-pill" data-budget="$75k - $200k">$75k – $200k</div>
+            <div class="budget-pill" data-budget="$200k+">$200k+ / Enterprise</div>
+          </div>
+          <input type="hidden" id="selected-budget" value="$25k - $75k" />
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="client-goal">PRIMARY GROWTH OBJECTIVE</label>
+          <select id="client-goal" class="form-select">
+            <option value="scale-roas">Scale ROAS & Lower Acquisition Cost</option>
+            <option value="disruptive-creative">High-Converting Ad Creative Sprints</option>
+            <option value="brand-transformation">Total Brand Transformation & Repositioning</option>
+            <option value="omnichannel-expansion">Omnichannel Media Buying & Dominance</option>
+          </select>
+        </div>
+
+        <button type="submit" class="form-submit-btn">
+          <span>SCHEDULE CONSULTATION →</span>
+        </button>
+      </form>
+
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       IMAGE LIGHTBOX / HIGH-RES ASSET INSPECTOR
+       ========================================================================== -->
+  <div id="lightbox-modal" class="lightbox-modal" aria-hidden="true">
+    <div class="lightbox-inner">
+      <button id="lightbox-close" class="lightbox-close">CLOSE [ESC]</button>
+      <img id="lightbox-img" class="lightbox-img" src="" alt="High resolution asset preview" />
+    </div>
+  </div>
+
+  <!-- App Entry Point Module -->
+  <script type="module" src="./js/main.js"></script>
+</body>
+</html>
